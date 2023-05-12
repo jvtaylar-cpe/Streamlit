@@ -5,8 +5,15 @@ import numpy as np
 st.header("Scientific Calculator")
 
 # Create a function to perform a mathematical operation on two numbers.
+
+if st.button('Say hello'):
+     st.write('Why hello there')
+else:
+     st.write('Goodbye')
+        
+        
 def calculate(operation, number1, number2):
-    if operation == "+":
+    if operation == st.button("+"):
         return number1 + number2
     elif operation == "-":
         return number1 - number2
