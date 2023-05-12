@@ -9,13 +9,13 @@ cur = conn.cursor()
 st.header("CRUD Database App")
 
 # Create UI elements.
-name_label = st.label("Name:")
+name_label = st.text("Name:")
 name_entry = st.text_input("")
 
-email_label = st.label("Email:")
+email_label = st.text("Email:")
 email_entry = st.text_input("")
 
-phone_label = st.label("Phone:")
+phone_label = st.text("Phone:")
 phone_entry = st.text_input("")
 
 add_button = st.button("Add")
