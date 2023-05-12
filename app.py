@@ -14,14 +14,14 @@ st.header("CRUD Database App")
 
 # Display the value of the text input.
 # st.write("Your name is", name)
-text_input = st.text_input("Enter your name", key="Name")
-Name = text_input.value
+text_input = st.text_input("Enter your name", key="name")
+name = text_input.value
 
-text_input = st.text_input("Enter your name", key="Email")
-Email = text_input.value
+text_input = st.text_input("Enter your name", key="email")
+email = text_input.value
 
-text_input = st.text_input("Enter your name", key="Phone")
-Phone = text_input.value
+text_input = st.text_input("Enter your name", key="phone")
+phone = text_input.value
 
 
 add_button = st.button("Add")
