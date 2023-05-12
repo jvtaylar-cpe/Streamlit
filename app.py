@@ -23,7 +23,7 @@ listbox = st.selectbox("Select a contact:", [])
 # Create a function to load the data from the database.
 def load_data():
     # Delete all the items from the listbox.
-    listbox.clear()
+#     listbox.clear()
 
     # Get all the contacts from the database.
     cur.execute("SELECT * FROM contacts")
