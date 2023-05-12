@@ -13,7 +13,7 @@ else:
         
         
 def calculate(operation, number1, number2):
-    if operation == "+"):
+    if operation == "+":
         return number1 + number2
     elif operation == "-":
         return number1 - number2
