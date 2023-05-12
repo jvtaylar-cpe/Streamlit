@@ -9,14 +9,20 @@ cur = conn.cursor()
 st.header("CRUD Database App")
 
 # Create UI elements.
-name_label = st.text("Name:")
-name_entry = st.text_input("")
 
-email_label = st.text("Email:")
-email_entry = st.text_input("")
 
-phone_label = st.text("Phone:")
-phone_entry = st.text_input("")
+
+# Display the value of the text input.
+# st.write("Your name is", name)
+text_input = st.text_input("Enter your name", key="Name")
+Name = text_input.value
+
+text_input = st.text_input("Enter your name", key="Email")
+Email = text_input.value
+
+text_input = st.text_input("Enter your name", key="Phone")
+Phone = text_input.value
+
 
 add_button = st.button("Add")
 update_button = st.button("Update")
