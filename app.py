@@ -3,6 +3,18 @@ import sqlite3
 
 # Create a connection to the database.
 conn = sqlite3.connect("contacts.db")
+
+ cur = self.conn.cursor()
+ cur.execute("""CREATE TABLE IF NOT EXISTS contacts
+                            (id INTEGER PRIMARY KEY,
+                            name TEXT NOT NULL,
+                            email TEXT NOT NULL,
+                            phone TEXT NOT NULL)""")
+ conn.commit()
+ #load data from database
+ 
+
+
 cur = conn.cursor()
 
 # Create a header for the app.
