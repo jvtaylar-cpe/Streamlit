@@ -9,20 +9,9 @@ cur = conn.cursor()
 st.header("CRUD Database App")
 
 # Create UI elements.
-
-
-
-# Display the value of the text input.
-# st.write("Your name is", name)
-text_input = st.text_input("Enter your name", key="name")
-name = text_input.value
-
-text_input = st.text_input("Enter your name", key="email")
-email = text_input.value
-
-text_input = st.text_input("Enter your name", key="phone")
-phone = text_input.value
-
+name_input = st.text_input("Enter a name:", key="name")
+email_input = st.text_input("Enter an email:", key="email")
+phone_input = st.text_input("Enter a phone number:", key="phone")
 
 add_button = st.button("Add")
 update_button = st.button("Update")
@@ -49,9 +38,9 @@ load_data()
 
 # When the add button is clicked, add the contact to the database.
 if add_button:
-    name = name_entry.value
-    email = email_entry.value
-    phone = phone_entry.value
+    name = name_input.value
+    email = email_input.value
+    phone = phone_input.value
 
     cur.execute("INSERT INTO contacts(name,email,phone) VALUES(?,?,?)", (name,email,phone))
     conn.commit()
@@ -61,11 +50,11 @@ if add_button:
 # When the update button is clicked, update the contact in the database.
 if update_button:
     index = listbox.index(listbox.value)
-    name = name_entry.value
-    email = email_entry.value
-    phone = phone_entry.value
+    name = name_input.value
+    email = email_input.value
+    phone = phone_input.value
 
-    cur.execute("UPDATE contacts SET name=?, email=?, phone=? WHERE name=?",(name, new_email, new_phone, name))
+    cur.execute("UPDATE contacts SET email=?, phone=? WHERE name=?", (email, phone, name))
     conn.commit()
 
     load_data()
