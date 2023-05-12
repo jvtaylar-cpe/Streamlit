@@ -5,13 +5,6 @@ import numpy as np
 st.header("Scientific Calculator")
 
 # Create a function to perform a mathematical operation on two numbers.
-
-if st.button('Say hello'):
-     st.write('Why hello there')
-else:
-     st.write('Goodbye')
-        
-        
 def calculate(operation, number1, number2):
     if operation == "+":
         return number1 + number2
@@ -43,7 +36,7 @@ number1 = st.number_input("Enter the first number:")
 number2 = st.number_input("Enter the second number:")
 
 # Create a dropdown menu for the mathematical operation.
-operation = st.button(["+", "-", "*", "/", "^", "log", "sin", "cos", "tan", "sqrt"])
+operation = st.selectbox("Select a mathematical operation:", ["+", "-", "*", "/", "^", "log", "sin", "cos", "tan", "sqrt"])
 
 # Calculate the result of the mathematical operation.
 result = calculate(operation, number1, number2)
