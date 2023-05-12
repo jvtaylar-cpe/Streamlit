@@ -13,7 +13,7 @@ else:
         
         
 def calculate(operation, number1, number2):
-    if operation == st.button("+"):
+    if operation == "+"):
         return number1 + number2
     elif operation == "-":
         return number1 - number2
@@ -43,7 +43,7 @@ number1 = st.number_input("Enter the first number:")
 number2 = st.number_input("Enter the second number:")
 
 # Create a dropdown menu for the mathematical operation.
-operation = st.selectbox("Select a mathematical operation:", ["+", "-", "*", "/", "^", "log", "sin", "cos", "tan", "sqrt"])
+operation = st.button(["+", "-", "*", "/", "^", "log", "sin", "cos", "tan", "sqrt"])
 
 # Calculate the result of the mathematical operation.
 result = calculate(operation, number1, number2)
